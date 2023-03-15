@@ -1,6 +1,6 @@
 import './Banner.css'
 
-function Banner(){
+export const Banner = () => {
     //isso é JSX, ou seja, parece HTML mas não é, é JS, o react 
     //le isso e faz um append no component q vamos importar ele
     return(
@@ -13,5 +13,3 @@ function Banner(){
         
     )
 }
-
-export default Banner
