@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Banner from './componentes/Banner/Banner';
 
 function App() {
+  //Banner é um component q foi importado
   return (
     <div className="App">
+      <Banner />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
