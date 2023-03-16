@@ -10,6 +10,7 @@ const CampoTexto = (props) => {
                 {props.label}
             </label>
             <input 
+                required= {props.obrigatorio}
                 placeholder= {placeholderModificada}
             />
         </div>
