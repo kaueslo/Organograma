@@ -4,7 +4,7 @@ import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa';
 import "./Formulario.css";
 
-const Formulario = () => {
+const Formulario = (props) => {
 const itens =[
   "Teste1",
   "Teste2",
@@ -27,9 +27,16 @@ const [item, setItem] = useState('')
         const [valor, setValor] = useState('')
         */
 
+//esse props.aoUsuarioCadastrado tá passando o objeto pro app.js, pro submit dele
 const aoSalvar = (evento) => {
   evento.preventDefault();
-    console.log("Form foi submetido => ", nome, cargo, imagem, item);
+  console.log("Form foi submetido => ", nome, cargo, imagem, item);
+  props.aoUsuarioCadastrado({
+    nome,
+    cargo,
+    imagem,
+    item
+  })
 }
 
   return (
