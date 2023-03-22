@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
+import Item from './componentes/Item';
 
 function App() {
   //Banner é um component q foi importado
@@ -20,6 +21,8 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario aoUsuarioCadastrado={usuario => aoNovoUsuarioAdicionado(usuario)}/>
+      <Item nome="Teste 1"/>
+      <Item nome="Teste 2"/>
     </div>
   );
 }
