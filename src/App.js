@@ -56,7 +56,13 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario itens={itens.map(itens => itens.nome)} aoUsuarioCadastrado={usuario => aoNovoUsuarioAdicionado(usuario)}/>
-      {itens.map(item => <Item key={item.nome} nome={item.nome} corPrimaria={item.corPrimaria} corSecundaria={item.corSecundaria} />)}
+      {itens.map(item => <Item 
+        key={item.nome} 
+        nome={item.nome} 
+        corPrimaria={item.corPrimaria} 
+        corSecundaria={item.corSecundaria} 
+        usuarios={usuarios.filter(usuario => usuario.item === item.nome)}
+      />)}
     </div>
   );
 }

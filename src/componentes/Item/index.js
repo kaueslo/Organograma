@@ -5,7 +5,9 @@ const Item = (props) => {
     return (
         <section className='item' style={{ backgroundColor: props.corSecundaria }}>
             <h3 style={{borderColor: props.corPrimaria}}>{props.nome}</h3>
-            <Colaborador />
+            <div className='colaboradores'>
+                {props.usuarios.map(usuario => <Colaborador nome={usuario.nome} item={usuario.item} imagem={usuario.imagem}/>)}
+            </div>
         </section>
     )
 }
