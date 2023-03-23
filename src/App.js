@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoUsuarioCadastrado={usuario => aoNovoUsuarioAdicionado(usuario)}/>
+      <Formulario itens={itens.map(itens => itens.nome)} aoUsuarioCadastrado={usuario => aoNovoUsuarioAdicionado(usuario)}/>
       {itens.map(item => <Item key={item.nome} nome={item.nome} corPrimaria={item.corPrimaria} corSecundaria={item.corSecundaria} />)}
     </div>
   );
