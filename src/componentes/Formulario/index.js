@@ -22,13 +22,17 @@ const [item, setItem] = useState('')
 //esse props.aoUsuarioCadastrado tá passando o objeto pro app.js, pro submit dele
 const aoSalvar = (evento) => {
   evento.preventDefault();
-  console.log("Form foi submetido => ", nome, cargo, imagem, item);
+  //console.log("Form foi submetido => ", nome, cargo, imagem, item);
   props.aoUsuarioCadastrado({
     nome,
     cargo,
     imagem,
     item
   })
+  setNome('')
+  setCargo('')
+  setImagem('')
+  setItem('')
 }
 
   return (
