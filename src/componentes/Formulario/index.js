@@ -6,12 +6,12 @@ import "./Formulario.css";
 
 const Formulario = (props) => {
 const itens =[
-  "Teste1",
-  "Teste2",
-  "Teste3",
-  "Teste4",
-  "Teste5",
-  "Teste6"
+  "Nevoa",
+  "Areia",
+  "Folha",
+  "Pedra",
+  "Nuvem",
+  "Chuva"
 ]
 const [nome, setNome] = useState('')
 const [cargo, setCargo] = useState('')

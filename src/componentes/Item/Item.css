@@ -1,13 +1,11 @@
 .item{
     text-align: center;
     padding: 32px;
-    background-color: #E8F8FF;
-
 }
 
 .item h3{
     font-size: 32px;
-    border-bottom: 4px solid #82CFFA; 
+    border-bottom: 4px solid; 
     display: inline-block;
     padding-bottom: 8px;
 }

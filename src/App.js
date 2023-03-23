@@ -4,6 +4,40 @@ import Formulario from './componentes/Formulario';
 import Item from './componentes/Item';
 
 function App() {
+
+  const itens = [
+    {
+      nome: 'Nevoa',
+      corPrimaria: '#82CFFA',
+      corSecundaria: '#E8F8FF'
+    },
+    {
+      nome: 'Areia',
+      corPrimaria: '#A6D157',
+      corSecundaria: '#F0F8E2'
+    },
+    {
+      nome: 'Folha',
+      corPrimaria: '#E06B69',
+      corSecundaria: '#FDE7E8'
+    },
+    {
+      nome: 'Pedra',
+      corPrimaria: '#DB6EBF',
+      corSecundaria: '#FAE9F5'
+    },
+    {
+      nome: 'Nuvem',
+      corPrimaria: '#FFBA05',
+      corSecundaria: '#FFF5D9'
+    },
+    {
+      nome: 'Chuva',
+      corPrimaria: '#FF8A29',
+      corSecundaria: '#FFEEDF'
+    }
+  ]
+
   //Banner é um component q foi importado
 
   /*
@@ -17,12 +51,12 @@ function App() {
     setUsuarios([...usuarios, usuario])
   }
 
+  //chamando os itens dinâmico
   return (
     <div className="App">
       <Banner />
       <Formulario aoUsuarioCadastrado={usuario => aoNovoUsuarioAdicionado(usuario)}/>
-      <Item nome="Teste 1"/>
-      <Item nome="Teste 2"/>
+      {itens.map(item => <Item key={item.nome} nome={item.nome} corPrimaria={item.corPrimaria} corSecundaria={item.corSecundaria} />)}
     </div>
   );
 }
