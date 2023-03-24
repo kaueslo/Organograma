@@ -46,7 +46,9 @@ function App() {
   const [usuarios, setUsuarios] = useState([])
 
   //Esse set é o armazenamento do novo usuário do sistema
+  //debugger é o método pra debugar o sistema, ele para e conseguimos ver oq tá sendo passado ao sistema
   const aoNovoUsuarioAdicionado = (usuario) => {
+    //debugger
     setUsuarios([...usuarios, usuario])
   }
 
