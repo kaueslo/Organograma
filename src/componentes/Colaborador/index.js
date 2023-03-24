@@ -1,9 +1,9 @@
 import './Colaborador.css'
 
 //outra forma e comum de chamar as props
-const Colaborador = ({ nome, imagem, item }) => {
+const Colaborador = ({ nome, imagem, item, corDeFundo }) => {
     return (<div className='colaborador'>
-        <div className='cabecalho'>
+        <div className='cabecalho' style={{backgroundColor: corDeFundo}}>
             <img src={imagem} alt={nome}/>
         </div>
         <div className='rodape'>

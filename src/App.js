@@ -47,7 +47,6 @@ function App() {
 
   //Esse set é o armazenamento do novo usuário do sistema
   const aoNovoUsuarioAdicionado = (usuario) => {
-    console.log(usuario)
     setUsuarios([...usuarios, usuario])
   }
 
