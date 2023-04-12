@@ -1,9 +1,11 @@
+//as duas primeiras letras fala qual é a pasta do ícone q estamos importando
+import { AiFillCloseCircle } from 'react-icons/ai'
 import './Colaborador.css'
 
 //outra forma e comum de chamar as props
 const Colaborador = ({ nome, imagem, item, corDeFundo, aoDeletar }) => {
     return (<div className='colaborador'>
-        <div className='deletar' onClick={aoDeletar}>deletar</div>
+        <AiFillCloseCircle size={25} className='deletar' onClick={aoDeletar} />
         <div className='cabecalho' style={{backgroundColor: corDeFundo}}>
             <img src={imagem} alt={nome}/>
         </div>
