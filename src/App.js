@@ -52,6 +52,10 @@ function App() {
     setUsuarios([...usuarios, usuario])
   }
 
+  function deletarColaborador(){
+    console.log('deletando colaborador')
+  }
+
   //chamando os itens dinâmico
   return (
     <div className="App">
@@ -63,6 +67,7 @@ function App() {
         corPrimaria={item.corPrimaria} 
         corSecundaria={item.corSecundaria} 
         usuarios={usuarios.filter(usuario => usuario.item === item.nome)}
+        aoDeletar={deletarColaborador}
       />)}
     </div>
   );
