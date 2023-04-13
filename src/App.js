@@ -5,7 +5,7 @@ import Item from './componentes/Item';
 
 function App() {
 
-  const itens = [
+  const [itens, setItens] = useState([
     {
       nome: 'Nevoa',
       corPrimaria: '#82CFFA',
@@ -36,7 +36,7 @@ function App() {
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF'
     }
-  ]
+  ])
 
   //Banner é um component q foi importado
 
@@ -56,6 +56,15 @@ function App() {
     console.log('deletando colaborador')
   }
 
+  function mudarCorDoTime(cor, nome){
+    setItens(itens.map(item => {
+      if(item.nome === nome){
+        item.corSecundaria = cor;
+      }
+      return item;
+    }));
+  }
+
   //chamando os itens dinâmico
   return (
     <div className="App">
@@ -68,6 +77,7 @@ function App() {
         corSecundaria={item.corSecundaria} 
         usuarios={usuarios.filter(usuario => usuario.item === item.nome)}
         aoDeletar={deletarColaborador}
+        mudarCor={mudarCorDoTime}
       />)}
     </div>
   );
